@@ -1,9 +1,9 @@
 # Research Report
 
-**Project Title:**  
-**Author(s):**  
-**Date:**  
-**Version:**  
+**Project Title: Rapid MVO**  
+**Author(s): Andrew Criddle, Joseph Moore, elaborating on work from Kyle Markham**  
+**Date: March 2026**  
+**Version: 1**  
 
 ---
 
@@ -18,11 +18,12 @@ Provide a brief overview of:
 
 ### Key Metrics
 
-| Metric | Value | Notes |
-|------|------|------|
-| Primary Metric |  |  |
-| Secondary Metric |  |  |
-| Other |  |  |
+| Metric | Value | Benchmark | Error | Notes |
+|------|------|------|------|------|
+| 1 Month Backtest Time |  |  |  |  |
+| 1 Month Backtest Time, equality constrained |  |  |  |  |
+| 1 Month Backtest Time, equality and inequality constrained |  |  |  |  |
+| 1 Year Backtest Time |  |  |  |  |
 
 ## 2. Data Requirements
 
