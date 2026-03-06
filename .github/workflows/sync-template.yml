@@ -1,0 +1,32 @@
+name: Sync Template
+
+on:
+  schedule:
+    # Runs at 00:00 every Monday (UTC)
+    - cron: "0 0 * * 1"
+  workflow_dispatch: # Allows manual triggering from Actions tab
+
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    # Don't run this workflow in the template repo itself
+    if: github.repository != 'BYUSilverFund/sf-research'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sync Template Updates
+        uses: AndreasAugustin/actions-template-sync@v2
+        with:
+          source_gh_token: ${{ secrets.GITHUB_TOKEN }}
+          source_repo_path: BYUSilverFund/sf-research
+          upstream_branch: main
+          pr_title: "chore: update from template"
+          pr_labels: "template-sync, automated"
+          template_sync_ignore_file_path: .templateignore

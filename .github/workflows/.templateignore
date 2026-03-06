@@ -1,0 +1,11 @@
+# User customization files - don't sync these during template updates
+src/signal/create_signal.py
+signal_research.ipynb
+.env
+
+# Generated/local files
+data/
+__pycache__/
+.venv/
+*.parquet
+logs/

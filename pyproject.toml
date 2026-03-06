@@ -1,0 +1,33 @@
+[project]
+name = "sf-research"
+version = "0.1.0"
+description = "Research Module Reserachers"
+readme = "README.md"
+requires-python = ">=3.13, <3.14"
+dependencies = [
+    "numpy>=2.3.2",
+    "polars>=1.32.3",
+    "sf-quant==0.1.23",
+    "sf-backtester>=0.1.1",
+    "marimo[lsp,mcp]>=0.19.7",
+    "plotly>=6.5.2",
+    "polars-ols>=0.3.5",
+    "pandas>=3.0.0",
+    "pyarrow>=23.0.1",
+    "tabulate>=0.9.0",
+    "ipykernel>=7.2.0",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.1",
+    "ruff>=0.15.1",
+]
+
+[tool.marimo.language_servers.pylsp]
+enabled = true               # Enable/disable the Python language server
+enable_mypy = true           # Type checking with mypy (enabled by default, if installed)
+enable_ruff = true           # Linting with ruff (enabled by default, if installed)
+
+[tool.marimo.diagnostics]
+enabled = true               # Show diagnostics in the editor
