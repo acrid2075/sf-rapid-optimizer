@@ -17,7 +17,7 @@ This project focuses on improving the speed of optimization through careful matr
 
 ```
 | Metric | Value | Benchmark | Error |
-|------|------|------|------|------|
+|------|------|------|------|
 | 1 Month Backtest Time | 14.74814 | 213.32540 | 0.0010595 |
 | 1 Month Backtest Time, equality constrained | 16.26157 | 268.47322 | 3.20913e-11 |
 | 1 Month Backtest Time, equality and inequality constrained | 119.68944 | 1865.92818 | 0.24497 |
