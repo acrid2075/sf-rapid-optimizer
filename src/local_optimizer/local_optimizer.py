@@ -457,3 +457,4 @@ class FactorMVO:
                   f"Final risk={r:.3e}, target={target}, last gamma={gamma}.")
 
         return self._solve_fixed_gamma(gamma, w0=w_init)
+    
