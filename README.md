@@ -81,6 +81,14 @@ sf-signal/
 
 ## Workflow
 
+### Required Columns
+date: Date column
+barrid: Asset identifier
+alpha: Alpha signal values
+predicted_beta: Predicted beta values
+signal: orignal signal values (name can be changed)
+
+
 ### 1. **Implement Signal** (`create_signal.py`)
    - Customize date ranges, data columns, and calculation logic
    - Develop your signal logic
@@ -121,7 +129,7 @@ sf-signal/
 All data files are stored in the `data/` directory:
 
 - **`data/signal.parquet`**: Output from `create_signal.py`
-  - Columns: `date`, `barrid`, `alpha` (your signal)
+  - Columns: `date`, `barrid`, `alpha` (your signal), `signal`
   - Format: Parquet (AlphaSchema)
 
 - **`data/weights/*.parquet`**: Output from backtest
